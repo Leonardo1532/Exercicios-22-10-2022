@@ -1,26 +1,46 @@
-/*.Faça um algoritmo que leia um array, e o preencha com números inteiros, 
-se esse array tiver alguma posição com valor zero você deve eliminar essa posição. Para fazer isso,
- todos os elementos à frente do valor zero devem ser movidos uma posição para trás no vetor. 
- Ex.: entrada - array[2,6,8,0,6,4,3,2,0,7] saída - array[2,6,8,6,4,3,2,7] 
-
-
+/* 1. Você deve criar um programa que solicite ao seu usuário dois
+números A e B.
+2. Crie uma função que receba os dois valores fornecidos pelo
+usuário e faça uma soma com eles, e retorne o resultado;
+3. Crie uma função que receba os dois valores fornecidos pelo
+usuário e faça uma subtração com eles, e retorne o resultado;
+4. Crie uma função que receba os dois valores fornecidos pelo
+usuário e faça uma multiplicação com eles, e retorne o
+resultado;
+5. Crie uma função que receba os dois valores fornecidos pelo
+usuário e faça uma divisão com eles, e retorne o resultado;
+6. Faça com que seu usuário escolha qual função ele deseja fazer
+com os números que ele inseriu, e depois de realizar essa
+operação pergunte se ele deseja fazer outra ou encerrar a
+aplicação.
+7. Crie um array para salvar o resultado das operações e crie
+também uma função para exibir o histórico dos resultados.
+ATENÇÃO!! Faça um commit para cada item do exercício.
 */
 
-var array = []
-var arraySuporte = []
-var indexSup = 0
-for(var contador = 0; contador < 5; contador++){
-    array[contador] = parseInt(prompt("Insira um número"))
+var numA = parseInt(prompt("Insira o primeiro número"))
+var numB = parseInt(prompt("Insira o segundo número"))
+
+Soma(numA, numB)
+function Soma(num1, num2){
+    console.log(num1 + num2)
+    return(Soma)
 }
 
-console.log(array)
-
-for(var contador = 0; contador < 5; contador++){
-    if(array[contador] != 0){
-        arraySuporte[indexSup] = array[contador]
-        indexSup++
-    }
+Subtracao(numA, numB)
+function Subtracao(num1, num2){
+    console.log(num1 - num2)
+    return(Subtracao)
 }
 
-array = arraySuporte
-console.log(array)
+Multiplicacao(numA, numB)
+function Multiplicacao(num1, num2){
+    console.log(num1 * num2)
+    return(Multiplicacao)
+}
+
+Divisao(numA, numB)
+function Divisao(num1, num2){
+    console.log(num1 / num2)
+    return(Divisao)
+}
